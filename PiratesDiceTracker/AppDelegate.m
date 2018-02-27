@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+//#import <Google/Analytics.h>
+#import <GAI.h>
+#import <GAIDictionaryBuilder.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +20,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // Need to prevent the application from sleeping during play.
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
+    //UA-72336303-1
+    [[GAI sharedInstance] setTrackUncaughtExceptions:YES];
+    [[GAI sharedInstance] setDispatchInterval:30];
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
+    id<GAITracker> tracker = tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-72336303-1"];
+    
+    
     return YES;
 }
 

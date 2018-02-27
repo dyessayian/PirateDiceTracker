@@ -1,25 +1,207 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Pieces of Eight.ttf">
+            <string>PiecesofEight</string>
+        </mutableArray>
+        <mutableArray key="PiratesWriters.ttf">
+            <string>PiratesWriters</string>
+            <string>PiratesWriters</string>
+            <string>PiratesWriters</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DRYMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="MainView">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PiratesDice_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="GWf-sF-EI1" userLabel="Background Image">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mms-ez-hTk">
+                                <rect key="frame" x="228" y="298" width="80" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="52"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="incrementButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kqb-X3-TyA"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AHOY! THERE'S A 42% CHANCE OF WINNING, MATEY!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMG-xs-BWj">
+                                <rect key="frame" x="37" y="610" width="396" height="151"/>
+                                <fontDescription key="fontDescription" name="PiratesWriters" family="Pirates Writers" pointSize="35"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.75294117647058822" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLT-3E-q3L">
+                                <rect key="frame" x="100" y="298" width="120" height="82"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="68"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdq-eT-sId">
+                                <rect key="frame" x="12" y="298" width="80" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="52"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="decrementButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ui6-sR-Wmw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dp-ec-13V">
+                                <rect key="frame" x="58" y="329" width="354" height="348"/>
+                                <fontDescription key="fontDescription" name="PiecesofEight" family="Pieces of Eight" pointSize="290"/>
+                                <size key="titleShadowOffset" width="7" height="7"/>
+                                <state key="normal" title="24">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.75294117650000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="diceButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QxD-3b-mWP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrX-4B-3Dc">
+                                <rect key="frame" x="862" y="45" width="139" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="L1N-Nb-aQE"/>
+                                    <constraint firstAttribute="height" constant="114" id="t7W-CJ-zKi"/>
+                                </constraints>
+                                <state key="normal" image="PiratesDice_mapicon.png"/>
+                                <connections>
+                                    <action selector="mapButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yy6-b3-9Ck"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrJ-bY-48F">
+                                <rect key="frame" x="861" y="609" width="139" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="IEo-hm-HyS"/>
+                                    <constraint firstAttribute="height" constant="114" id="rm1-Vi-ZDT"/>
+                                </constraints>
+                                <state key="normal" image="PiratesDice_hookhelp.png"/>
+                                <connections>
+                                    <action selector="helpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yKE-mz-LkC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xn-mW-Del" userLabel="Drawer View">
+                                <rect key="frame" x="1024" y="0.0" width="476" height="768"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PiratesDice_drawer.png" translatesAutoresizingMaskIntoConstraints="NO" id="1L5-wP-NwT" userLabel="Drawer Curtain Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="476" height="768"/>
+                                    </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dtE-E3-gZP">
+                                        <rect key="frame" x="126" y="99" width="350" height="669"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="74" id="L8r-Zn-KiT" customClass="DRYPirateDrawerTableViewCell">
+                                                <rect key="frame" x="0.0" y="28" width="350" height="74"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L8r-Zn-KiT" id="MGB-Od-4HK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="74"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="4RY-62-PEJ"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="aZn-Z1-Ad4"/>
+                                        </connections>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zs4-Cf-Abr">
+                                        <rect key="frame" x="126" y="0.0" width="350" height="99"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y89-sO-rdN">
+                                                <rect key="frame" x="188" y="54" width="133" height="45"/>
+                                                <fontDescription key="fontDescription" name="PiratesWriters" family="Pirates Writers" pointSize="35"/>
+                                                <color key="textColor" red="0.80000000000000004" green="0.75294117650000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#OF DICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrm-uR-WN8">
+                                                <rect key="frame" x="16" y="54" width="157" height="45"/>
+                                                <fontDescription key="fontDescription" name="PiratesWriters" family="Pirates Writers" pointSize="35"/>
+                                                <color key="textColor" red="0.80000000000000004" green="0.75294117650000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1L5-wP-NwT" secondAttribute="bottom" id="3gY-zn-zqK"/>
+                                    <constraint firstAttribute="trailing" secondItem="1L5-wP-NwT" secondAttribute="trailing" id="aUg-CW-7jX"/>
+                                    <constraint firstItem="1L5-wP-NwT" firstAttribute="leading" secondItem="2xn-mW-Del" secondAttribute="leading" id="p5X-U4-7Ip"/>
+                                    <constraint firstItem="1L5-wP-NwT" firstAttribute="top" secondItem="2xn-mW-Del" secondAttribute="top" id="qbM-l5-Sdn"/>
+                                    <constraint firstAttribute="width" constant="476" id="yLa-Wd-gPp"/>
+                                </constraints>
+                            </view>
+                            <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpoverlay_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZFN-2t-uzO">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2xn-mW-Del" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Id-WG-nIT"/>
+                            <constraint firstItem="ZFN-2t-uzO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2LD-7E-6wo"/>
+                            <constraint firstAttribute="trailing" secondItem="ZFN-2t-uzO" secondAttribute="trailing" id="4UP-7h-dbh"/>
+                            <constraint firstItem="2xn-mW-Del" firstAttribute="leading" secondItem="ZFN-2t-uzO" secondAttribute="trailing" id="5lj-x8-SZe"/>
+                            <constraint firstAttribute="trailing" secondItem="RrJ-bY-48F" secondAttribute="trailing" constant="24" id="5xs-BA-VbI"/>
+                            <constraint firstItem="jrX-4B-3Dc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="45" id="Ajd-Wb-vP7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2xn-mW-Del" secondAttribute="bottom" id="Pcn-Fk-csH"/>
+                            <constraint firstAttribute="trailing" secondItem="2xn-mW-Del" secondAttribute="trailing" id="a10-fg-fel"/>
+                            <constraint firstItem="2xn-mW-Del" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="1024" id="dwD-5Q-plT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RrJ-bY-48F" secondAttribute="bottom" constant="45" id="i6r-on-GrB"/>
+                            <constraint firstItem="ZFN-2t-uzO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iaZ-SV-oMu"/>
+                            <constraint firstAttribute="trailing" secondItem="jrX-4B-3Dc" secondAttribute="trailing" constant="23" id="iwV-0d-M48"/>
+                            <constraint firstItem="2xn-mW-Del" firstAttribute="leading" secondItem="RrJ-bY-48F" secondAttribute="trailing" constant="24" id="qQt-x6-cxh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZFN-2t-uzO" secondAttribute="bottom" id="s9k-LX-Yqm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5lj-x8-SZe"/>
+                                <exclude reference="a10-fg-fel"/>
+                                <exclude reference="qQt-x6-cxh"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="chanceCorrectLabel" destination="VMG-xs-BWj" id="b2a-8f-pZb"/>
+                        <outlet property="currentDieCountLabel" destination="xLT-3E-q3L" id="4X5-cH-1kY"/>
+                        <outlet property="diceButton" destination="4Dp-ec-13V" id="Gda-la-4Qe"/>
+                        <outlet property="drawerLeadingConstraint" destination="dwD-5Q-plT" id="v6X-cS-w8U"/>
+                        <outlet property="drawerView" destination="2xn-mW-Del" id="eoq-nv-7yQ"/>
+                        <outlet property="helpButton" destination="RrJ-bY-48F" id="cMd-cL-Qy8"/>
+                        <outlet property="helpOverlayImageView" destination="ZFN-2t-uzO" id="hCR-aD-v3y"/>
+                        <outlet property="mapButton" destination="jrX-4B-3Dc" id="8H3-ks-odc"/>
+                        <outlet property="probabilityTableView" destination="dtE-E3-gZP" id="JQj-VH-T6h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="291" y="776"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PiratesDice_background.png" width="2048" height="1536"/>
+        <image name="PiratesDice_drawer.png" width="1037" height="1536"/>
+        <image name="PiratesDice_hookhelp.png" width="151" height="209"/>
+        <image name="PiratesDice_mapicon.png" width="278" height="228"/>
+        <image name="helpoverlay_text.png" width="2048" height="1536"/>
+    </resources>
 </document>

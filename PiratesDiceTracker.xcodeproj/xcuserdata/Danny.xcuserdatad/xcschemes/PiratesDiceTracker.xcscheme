@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3048F62E1BDBD23100671981"
-               BuildableName = "PiratesDiceTracker.app"
+               BuildableName = "Pirate Dice Tracker.app"
                BlueprintName = "PiratesDiceTracker"
                ReferencedContainer = "container:PiratesDiceTracker.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3048F62E1BDBD23100671981"
-            BuildableName = "PiratesDiceTracker.app"
+            BuildableName = "Pirate Dice Tracker.app"
             BlueprintName = "PiratesDiceTracker"
             ReferencedContainer = "container:PiratesDiceTracker.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3048F62E1BDBD23100671981"
-            BuildableName = "PiratesDiceTracker.app"
+            BuildableName = "Pirate Dice Tracker.app"
             BlueprintName = "PiratesDiceTracker"
             ReferencedContainer = "container:PiratesDiceTracker.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3048F62E1BDBD23100671981"
-            BuildableName = "PiratesDiceTracker.app"
+            BuildableName = "Pirate Dice Tracker.app"
             BlueprintName = "PiratesDiceTracker"
             ReferencedContainer = "container:PiratesDiceTracker.xcodeproj">
          </BuildableReference>

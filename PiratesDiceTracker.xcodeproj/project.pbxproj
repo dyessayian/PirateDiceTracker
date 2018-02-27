@@ -9,23 +9,58 @@
 /* Begin PBXBuildFile section */
 		3048F6341BDBD23100671981 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3048F6331BDBD23100671981 /* main.m */; };
 		3048F6371BDBD23100671981 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3048F6361BDBD23100671981 /* AppDelegate.m */; };
-		3048F63A1BDBD23100671981 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3048F6391BDBD23100671981 /* ViewController.m */; };
 		3048F63D1BDBD23100671981 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3048F63B1BDBD23100671981 /* Main.storyboard */; };
 		3048F63F1BDBD23100671981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3048F63E1BDBD23100671981 /* Assets.xcassets */; };
 		3048F6421BDBD23100671981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3048F6401BDBD23100671981 /* LaunchScreen.storyboard */; };
+		3048F64C1BDBD27B00671981 /* DRYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3048F64B1BDBD27B00671981 /* DRYMainViewController.m */; };
+		3048F6511BDBD63900671981 /* Pieces of Eight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3048F64F1BDBD63900671981 /* Pieces of Eight.ttf */; };
+		3048F6521BDBD63900671981 /* PiratesWriters.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3048F6501BDBD63900671981 /* PiratesWriters.ttf */; };
+		3048F6561BDBD64300671981 /* PiratesDice_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3048F6531BDBD64300671981 /* PiratesDice_background.png */; };
+		3048F6581BDBD64300671981 /* PiratesDice_mapicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3048F6551BDBD64300671981 /* PiratesDice_mapicon.png */; };
+		3048F65A1BDBD7D000671981 /* PiratesDice_screen001.png in Resources */ = {isa = PBXBuildFile; fileRef = 3048F6591BDBD7D000671981 /* PiratesDice_screen001.png */; };
+		3048F65C1BDBD91600671981 /* PiratesDice_screen002.png in Resources */ = {isa = PBXBuildFile; fileRef = 3048F65B1BDBD91600671981 /* PiratesDice_screen002.png */; };
+		3048F6611BDBDDB800671981 /* DRYPirateDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3048F65F1BDBDDB800671981 /* DRYPirateDrawerTableViewCell.m */; };
+		3048F6621BDBDDB800671981 /* DRYPirateDrawerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3048F6601BDBDDB800671981 /* DRYPirateDrawerTableViewCell.xib */; };
+		305A494F1C44999B0056C978 /* helpoverlay_notext.png in Resources */ = {isa = PBXBuildFile; fileRef = 305A494D1C44999B0056C978 /* helpoverlay_notext.png */; };
+		305A49501C44999B0056C978 /* helpoverlay_textOld.png in Resources */ = {isa = PBXBuildFile; fileRef = 305A494E1C44999B0056C978 /* helpoverlay_textOld.png */; };
+		305A49521C4499A40056C978 /* ZakirahsCasual.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 305A49511C4499A40056C978 /* ZakirahsCasual.ttf */; };
+		30712F931C0E87DA000E077A /* PiratesDice_hookhelp.png in Resources */ = {isa = PBXBuildFile; fileRef = 30712F911C0E87DA000E077A /* PiratesDice_hookhelp.png */; };
+		30712F941C0E87DA000E077A /* PiratesDice_AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30712F921C0E87DA000E077A /* PiratesDice_AppIcon.png */; };
+		30E2135F1C45E1CF00D68E70 /* PiratesDice_drawer.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E2135D1C45E1CF00D68E70 /* PiratesDice_drawer.png */; };
+		30E213601C45E1CF00D68E70 /* helpoverlay_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 30E2135E1C45E1CF00D68E70 /* helpoverlay_text.png */; };
+		971DE27B7D4F1ADDF4841E2E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCD9AF6CA7BAE0CBA03535F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3048F62F1BDBD23100671981 /* PiratesDiceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiratesDiceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FE199330FD308F4B596F6B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3048F62F1BDBD23100671981 /* Pirate Dice Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pirate Dice Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3048F6331BDBD23100671981 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3048F6351BDBD23100671981 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3048F6361BDBD23100671981 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3048F6381BDBD23100671981 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3048F6391BDBD23100671981 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3048F63C1BDBD23100671981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3048F63E1BDBD23100671981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3048F6411BDBD23100671981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3048F6431BDBD23100671981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3048F64A1BDBD27B00671981 /* DRYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRYMainViewController.h; sourceTree = "<group>"; };
+		3048F64B1BDBD27B00671981 /* DRYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRYMainViewController.m; sourceTree = "<group>"; };
+		3048F64F1BDBD63900671981 /* Pieces of Eight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pieces of Eight.ttf"; sourceTree = "<group>"; };
+		3048F6501BDBD63900671981 /* PiratesWriters.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PiratesWriters.ttf; sourceTree = "<group>"; };
+		3048F6531BDBD64300671981 /* PiratesDice_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PiratesDice_background.png; sourceTree = "<group>"; };
+		3048F6551BDBD64300671981 /* PiratesDice_mapicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PiratesDice_mapicon.png; sourceTree = "<group>"; };
+		3048F6591BDBD7D000671981 /* PiratesDice_screen001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PiratesDice_screen001.png; sourceTree = "<group>"; };
+		3048F65B1BDBD91600671981 /* PiratesDice_screen002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PiratesDice_screen002.png; sourceTree = "<group>"; };
+		3048F65E1BDBDDB800671981 /* DRYPirateDrawerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRYPirateDrawerTableViewCell.h; sourceTree = "<group>"; };
+		3048F65F1BDBDDB800671981 /* DRYPirateDrawerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRYPirateDrawerTableViewCell.m; sourceTree = "<group>"; };
+		3048F6601BDBDDB800671981 /* DRYPirateDrawerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DRYPirateDrawerTableViewCell.xib; sourceTree = "<group>"; };
+		305A494D1C44999B0056C978 /* helpoverlay_notext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpoverlay_notext.png; sourceTree = "<group>"; };
+		305A494E1C44999B0056C978 /* helpoverlay_textOld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpoverlay_textOld.png; sourceTree = "<group>"; };
+		305A49511C4499A40056C978 /* ZakirahsCasual.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ZakirahsCasual.ttf; sourceTree = "<group>"; };
+		30712F911C0E87DA000E077A /* PiratesDice_hookhelp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PiratesDice_hookhelp.png; sourceTree = "<group>"; };
+		30712F921C0E87DA000E077A /* PiratesDice_AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PiratesDice_AppIcon.png; sourceTree = "<group>"; };
+		30E2135D1C45E1CF00D68E70 /* PiratesDice_drawer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PiratesDice_drawer.png; sourceTree = "<group>"; };
+		30E2135E1C45E1CF00D68E70 /* helpoverlay_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpoverlay_text.png; sourceTree = "<group>"; };
+		7CCD9AF6CA7BAE0CBA03535F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC678412CD91E11DBF7B8B49 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971DE27B7D4F1ADDF4841E2E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,13 +80,15 @@
 			children = (
 				3048F6311BDBD23100671981 /* PiratesDiceTracker */,
 				3048F6301BDBD23100671981 /* Products */,
+				BCFFCAB0FD46E2E72F2D45D0 /* Pods */,
+				F4C830C25C434D46BA873DC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		3048F6301BDBD23100671981 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3048F62F1BDBD23100671981 /* PiratesDiceTracker.app */,
+				3048F62F1BDBD23100671981 /* Pirate Dice Tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,14 +96,12 @@
 		3048F6311BDBD23100671981 /* PiratesDiceTracker */ = {
 			isa = PBXGroup;
 			children = (
-				3048F6351BDBD23100671981 /* AppDelegate.h */,
-				3048F6361BDBD23100671981 /* AppDelegate.m */,
-				3048F6381BDBD23100671981 /* ViewController.h */,
-				3048F6391BDBD23100671981 /* ViewController.m */,
-				3048F63B1BDBD23100671981 /* Main.storyboard */,
-				3048F63E1BDBD23100671981 /* Assets.xcassets */,
-				3048F6401BDBD23100671981 /* LaunchScreen.storyboard */,
-				3048F6431BDBD23100671981 /* Info.plist */,
+				30F1D0F31C3B5AED00A5AF80 /* Libraries */,
+				3048F64E1BDBD62E00671981 /* Fonts */,
+				3048F64D1BDBD62900671981 /* Assets */,
+				3048F65D1BDBDD8200671981 /* TableViewCell */,
+				3048F6491BDBD24C00671981 /* View Controllers */,
+				30F1D0F21C3B5AD700A5AF80 /* Main */,
 				3048F6321BDBD23100671981 /* Supporting Files */,
 			);
 			path = PiratesDiceTracker;
@@ -79,6 +115,89 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3048F6491BDBD24C00671981 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3048F64A1BDBD27B00671981 /* DRYMainViewController.h */,
+				3048F64B1BDBD27B00671981 /* DRYMainViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3048F64D1BDBD62900671981 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				30E2135D1C45E1CF00D68E70 /* PiratesDice_drawer.png */,
+				30E2135E1C45E1CF00D68E70 /* helpoverlay_text.png */,
+				305A494D1C44999B0056C978 /* helpoverlay_notext.png */,
+				305A494E1C44999B0056C978 /* helpoverlay_textOld.png */,
+				30712F911C0E87DA000E077A /* PiratesDice_hookhelp.png */,
+				30712F921C0E87DA000E077A /* PiratesDice_AppIcon.png */,
+				3048F65B1BDBD91600671981 /* PiratesDice_screen002.png */,
+				3048F6591BDBD7D000671981 /* PiratesDice_screen001.png */,
+				3048F6531BDBD64300671981 /* PiratesDice_background.png */,
+				3048F6551BDBD64300671981 /* PiratesDice_mapicon.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		3048F64E1BDBD62E00671981 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3048F64F1BDBD63900671981 /* Pieces of Eight.ttf */,
+				3048F6501BDBD63900671981 /* PiratesWriters.ttf */,
+				305A49511C4499A40056C978 /* ZakirahsCasual.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		3048F65D1BDBDD8200671981 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3048F65E1BDBDDB800671981 /* DRYPirateDrawerTableViewCell.h */,
+				3048F65F1BDBDDB800671981 /* DRYPirateDrawerTableViewCell.m */,
+				3048F6601BDBDDB800671981 /* DRYPirateDrawerTableViewCell.xib */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		30F1D0F21C3B5AD700A5AF80 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3048F6351BDBD23100671981 /* AppDelegate.h */,
+				3048F6361BDBD23100671981 /* AppDelegate.m */,
+				3048F63B1BDBD23100671981 /* Main.storyboard */,
+				3048F63E1BDBD23100671981 /* Assets.xcassets */,
+				3048F6401BDBD23100671981 /* LaunchScreen.storyboard */,
+				3048F6431BDBD23100671981 /* Info.plist */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		30F1D0F31C3B5AED00A5AF80 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		BCFFCAB0FD46E2E72F2D45D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27FE199330FD308F4B596F6B /* Pods.debug.xcconfig */,
+				DC678412CD91E11DBF7B8B49 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F4C830C25C434D46BA873DC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CCD9AF6CA7BAE0CBA03535F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3048F6461BDBD23100671981 /* Build configuration list for PBXNativeTarget "PiratesDiceTracker" */;
 			buildPhases = (
+				1DA8BEDE202BCC0D8F933F77 /* Check Pods Manifest.lock */,
 				3048F62B1BDBD23100671981 /* Sources */,
 				3048F62C1BDBD23100671981 /* Frameworks */,
 				3048F62D1BDBD23100671981 /* Resources */,
+				F53B1B93027EB05CF9990E04 /* Embed Pods Frameworks */,
+				E7ABD67C877C566C7F26C925 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +218,7 @@
 			);
 			name = PiratesDiceTracker;
 			productName = PiratesDiceTracker;
-			productReference = 3048F62F1BDBD23100671981 /* PiratesDiceTracker.app */;
+			productReference = 3048F62F1BDBD23100671981 /* Pirate Dice Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,22 +259,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30712F941C0E87DA000E077A /* PiratesDice_AppIcon.png in Resources */,
 				3048F6421BDBD23100671981 /* LaunchScreen.storyboard in Resources */,
+				30712F931C0E87DA000E077A /* PiratesDice_hookhelp.png in Resources */,
+				3048F6521BDBD63900671981 /* PiratesWriters.ttf in Resources */,
+				305A49521C4499A40056C978 /* ZakirahsCasual.ttf in Resources */,
 				3048F63F1BDBD23100671981 /* Assets.xcassets in Resources */,
+				305A49501C44999B0056C978 /* helpoverlay_textOld.png in Resources */,
+				305A494F1C44999B0056C978 /* helpoverlay_notext.png in Resources */,
+				3048F6561BDBD64300671981 /* PiratesDice_background.png in Resources */,
+				30E2135F1C45E1CF00D68E70 /* PiratesDice_drawer.png in Resources */,
+				3048F6581BDBD64300671981 /* PiratesDice_mapicon.png in Resources */,
+				3048F65C1BDBD91600671981 /* PiratesDice_screen002.png in Resources */,
+				3048F6621BDBDDB800671981 /* DRYPirateDrawerTableViewCell.xib in Resources */,
+				30E213601C45E1CF00D68E70 /* helpoverlay_text.png in Resources */,
+				3048F6511BDBD63900671981 /* Pieces of Eight.ttf in Resources */,
 				3048F63D1BDBD23100671981 /* Main.storyboard in Resources */,
+				3048F65A1BDBD7D000671981 /* PiratesDice_screen001.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DA8BEDE202BCC0D8F933F77 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7ABD67C877C566C7F26C925 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F53B1B93027EB05CF9990E04 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3048F62B1BDBD23100671981 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3048F63A1BDBD23100671981 /* ViewController.m in Sources */,
+				3048F64C1BDBD27B00671981 /* DRYMainViewController.m in Sources */,
 				3048F6371BDBD23100671981 /* AppDelegate.m in Sources */,
 				3048F6341BDBD23100671981 /* main.m in Sources */,
+				3048F6611BDBDDB800671981 /* DRYPirateDrawerTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,23 +447,27 @@
 		};
 		3048F6471BDBD23100671981 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27FE199330FD308F4B596F6B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PiratesDiceTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DRY.PiratesDiceTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pirate Dice Tracker";
 			};
 			name = Debug;
 		};
 		3048F6481BDBD23100671981 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC678412CD91E11DBF7B8B49 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PiratesDiceTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DRY.PiratesDiceTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pirate Dice Tracker";
 			};
 			name = Release;
 		};
@@ -301,6 +490,7 @@
 				3048F6481BDBD23100671981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
