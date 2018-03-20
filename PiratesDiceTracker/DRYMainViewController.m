@@ -11,7 +11,6 @@
 
 @interface DRYMainViewController () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *currentDieCountLabel;
 @property (nonatomic) NSInteger currentCount;
 @property (nonatomic, strong) NSMutableArray *probabilityDataSource;
 @property (weak, nonatomic) IBOutlet UITableView *probabilityTableView;
@@ -34,26 +33,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Analytics
     self.screenName = @"Main Screen";
     
-    //Initialize array
-    self.probabilityDataSource = [NSMutableArray new];
-
-    //Default dice count to 20
-    self.currentCount = 20;
-    
-    //Register Xib
-    [self.probabilityTableView registerNib:[UINib nibWithNibName:@"DRYPirateDrawerTableViewCell" bundle:nil] forCellReuseIdentifier:@"PirateCell"];
-    
-    //Setup Gestures for drawer and button counter.
-    [self swipeGestureSetup];
-    
-    [self.helpButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
-    
-    [self.helpButton.imageView setImage:[UIImage imageNamed:@"PiratesDice_hookhelp.png"]];
-    
-    //Setup Gestures for tap on help overlay
-    [self tapGestureSetup];
+    [self performInitialSetup];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,23 +44,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-#pragma mark - Buttons
-- (IBAction)decrementButtonTapped:(UIButton *)sender {
-    if (self.currentCount > 1){
-        self.currentCount -= 1;
-    }
-}
-
-- (IBAction)incrementButtonTapped:(UIButton *)sender {
-    if (self.currentCount < 99){
-        self.currentCount += 1;
-    }
-}
-
+#pragma mark - Button Actions
 - (IBAction)diceButtonTapped:(UIButton *)sender {
-    //NSLog(@"Caught tap");
-    [self decrementButtonTapped:nil];
+    [self decrementCurrentCount];
 }
 
 - (IBAction)mapButtonTapped:(UIButton *)sender {
@@ -99,9 +68,41 @@
     }
 }
 
+#pragma mark - Helper Methods
+-(void)performInitialSetup {
+    //Initialize array
+    self.probabilityDataSource = [NSMutableArray new];
+    
+    //Default dice count to 20
+    self.currentCount = 20;
+    
+    //Register Xib
+    [self.probabilityTableView registerNib:[UINib nibWithNibName:@"DRYPirateDrawerTableViewCell" bundle:nil] forCellReuseIdentifier:@"PirateCell"];
+    
+    //Setup Gestures for drawer and button counter.
+    [self swipeGestureSetup];
+    
+    [self.helpButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [self.helpButton.imageView setImage:[UIImage imageNamed:@"PiratesDice_hookhelp.png"]];
+    
+    //Setup Gestures for tap on help overlay
+    [self tapGestureSetup];
+}
+
+-(void)decrementCurrentCount {
+    if (self.currentCount > 1){
+        self.currentCount -= 1;
+    }
+}
+
+-(void)incrementCurrentCount {
+    if (self.currentCount < 99){
+        self.currentCount += 1;
+    }
+}
+
 #pragma mark - UIGestureRecognizer Delegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    
     if ((touch.view == self.diceButton)){
         return NO;
     }
@@ -109,7 +110,6 @@
 }
 
 #pragma mark - Helper Methods
-
 -(void) tapGestureSetup {
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(helpOverlayTapped:)];
     [self.helpOverlayImageView addGestureRecognizer:tapGesture];
@@ -150,11 +150,11 @@
     //NSLog(@"Button swiped");
     if (gestureRecognizer.direction == UISwipeGestureRecognizerDirectionUp){
         //NSLog(@"Increment");
-        [self incrementButtonTapped:nil];
+        [self incrementCurrentCount];
     }
     else if (gestureRecognizer.direction == UISwipeGestureRecognizerDirectionDown){
         //NSLog(@"Decrement!");
-        [self decrementButtonTapped:nil];
+        [self decrementCurrentCount];
     }
 }
 
@@ -168,11 +168,9 @@
 }
 
 -(void) longPress:(UISwipeGestureRecognizer*)gestureRecognizer {
-
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan){
         //NSLog(@"Long press!");
-        
-        UIAlertController * alert=   [UIAlertController
+        UIAlertController * alert = [UIAlertController
                                       alertControllerWithTitle:@"Set Dice Number"
                                       message:@"Choose what number of dice you'd like to start at (1-99)"
                                       preferredStyle:UIAlertControllerStyleAlert];
@@ -192,9 +190,6 @@
                                                                      //NSLog(@"Not valid");
                                                                      [self presentViewController:alert animated:YES completion:nil];
                                                                  }
-                                                                
-                                                            
-                                                                 
                                                              }];
         UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
                                                              handler:^(UIAlertAction * action) {
@@ -210,16 +205,11 @@
         }];
         
         [self presentViewController:alert animated:YES completion:nil];
-        
-        
-        
     }
-    
 }
 
 
--(void)setCurrentCount:(NSInteger)currentCount
-{
+-(void)setCurrentCount:(NSInteger)currentCount {
     //When the current count is updated, the label updates automatically.
     _currentCount = currentCount;
     [self.diceButton setTitle:[NSString stringWithFormat:@"%ld", (long)_currentCount] forState:UIControlStateNormal];
@@ -227,15 +217,14 @@
 }
 
 
-- (void) setProbabilityDrawerOpen: (BOOL)open
-{
+- (void) setProbabilityDrawerOpen: (BOOL)open {
     //NSLog(@"Sent: %d", open);
     if (!self.drawerIsAnimating){
         if (open){
             [UIView animateWithDuration:1.0 animations:^{
                 //NSLog(@"Animating opening");
                 self.drawerIsAnimating = YES;
-                self.drawerLeadingConstraint.constant = 548;
+                self.drawerLeadingConstraint.constant = -self.drawerView.frame.size.width; //548
                 [self.view layoutIfNeeded];
                 [self.mapButton layoutIfNeeded];
                 
@@ -249,7 +238,7 @@
             [UIView animateWithDuration:1.0 animations:^{
                 //NSLog(@"Animating closed");
                 self.drawerIsAnimating = YES;
-                self.drawerLeadingConstraint.constant = 1024;
+                self.drawerLeadingConstraint.constant = 0; //1024
                 [self.view layoutIfNeeded];
             } completion:^(BOOL finished) {
                 //NSLog(@"Done closing.");
@@ -266,7 +255,6 @@
 
 #pragma mark -
 #pragma mark - Calculations
-
 -(long double)factorial:(float)number1 {
     //First factorial attempt.  Overflows at n=35+, so switching to use alternate.
     return tgammaf(++number1);
@@ -332,7 +320,7 @@
     [self.probabilityTableView reloadData];
 }
 
-#pragma mark -ßœ
+#pragma mark -
 #pragma mark - UITableView Delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -357,7 +345,6 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     //NSLog(@"Selected value: %@", [self.probabilityDataSource objectAtIndex:indexPath.row]);
     //NSLog(@"The # of dice bet: %ld", indexPath.row+1);
     int diceBet = (int)(indexPath.row + 1);

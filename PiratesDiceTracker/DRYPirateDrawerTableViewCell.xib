@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="PiratesWriters.ttf">
+        <array key="PiratesWriters.ttf">
             <string>PiratesWriters</string>
-            <string>PiratesWriters</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -22,28 +25,25 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0C-mC-Yyx">
                         <rect key="frame" x="82" y="16" width="42" height="43"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="43" id="Iw0-8P-G8B"/>
                             <constraint firstAttribute="width" constant="42" id="vVG-4p-sNZ"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="PiratesWriters" family="Pirates Writers" pointSize="32"/>
-                        <color key="textColor" red="0.80000000000000004" green="0.75294117650000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.80000000000000004" green="0.75294117650000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.525" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDs-gS-094">
                         <rect key="frame" x="218" y="16" width="94" height="43"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="94" id="50N-PS-vR4"/>
                             <constraint firstAttribute="height" constant="43" id="X3e-al-7aU"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="PiratesWriters" family="Pirates Writers" pointSize="32"/>
-                        <color key="textColor" red="0.80000000000000004" green="0.75294117650000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.80000000000000004" green="0.75294117650000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="L0C-mC-Yyx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7K1-Le-Tua"/>
                     <constraint firstItem="xDs-gS-094" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FR2-V4-pfV"/>
@@ -57,7 +57,6 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="cellDiceLabel" destination="L0C-mC-Yyx" id="3ne-DZ-5as"/>
                 <outlet property="cellProbabilityLabel" destination="xDs-gS-094" id="ns6-NV-gg9"/>
